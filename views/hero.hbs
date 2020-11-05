@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-12 d-flex justify-content-center">
+    <h1 style:"text-align: center">{{details.name}}</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <img style="width:80%;height:100%;margin:auto;"src="{{details.thumbnail.path}}.jpg" alt="">
+  </div>
+  <div class="col-md-6">
+    {{#if details.description}}
+      <p>{{details.description}}</p>
+    {{/if}}
+    <p>Series: {{details.series.available}}</p>
+    <p>Comics: {{details.comics.available}}</p>
+    <p>Stories: {{details.stories.available}}</p>
+    <p>Events: {{details.events.available}}</p>
+      {{#each details.urls}}
+        <a target="_blank" href="{{this.url}}">{{this.type}}</a>
+        <br>
+      {{/each}}
+  </div>
+</div>
+<footer style="text-align:center">Data provided by Marvel. © 2020 MARVEL</footer>

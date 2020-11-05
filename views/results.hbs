@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-12 justify-content-center d-flex">
+    <h1>Results for {{searchQuery}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md justify-content-center d-flex">
+    <div class="list-group">
+      {{#each results}}
+        <a href="/search/{{this.id}}" class="list-group-item list-group-item-action">{{this.name}}</a>
+      {{/each}}
+    </div>
+  </div>
+</div>
+<footer style="text-align:center">Data provided by Marvel. © 2020 MARVEL</footer>
